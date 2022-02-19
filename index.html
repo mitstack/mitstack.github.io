@@ -1,24 +1,56 @@
 <html>
-<head>
-<title>New York City</title>
-</head>
+<SCRIPT>
+    var pos = 0;
+    const pacArray = [
+        ['PacMan1.png', 'PacMan2.png'],
+        ['PacMan3.png', 'PacMan4.png']
+    ];
+    var direction = 0;
+    var focus = 0;
+    let pageWidth = window.innerWidth;
+    
 
+    function Run() {
+        let img = document.getElementById("PacMan");
+        let imgWidth = img.width
+        focus = (focus + 1) % 2;
+        console.log('focus is', focus);
+        direction = checkPageBounds(direction, imgWidth, pos);
+        img.src = pacArray[direction][focus];
+        if (direction) {
+            pos -= 20;
+            img.style.left = pos + "px";
+        } else {
+            pos += 20;
+            img.style.left = pos + 'px';
+        }
+        // Use setTimeout to call Run every 200 millesecs
+    }
+    setInterval(Run, 200);
 
-<body style ="background-color:rgb(245, 226, 226);">
-<header class="description"></header>
-     <h1 style="text-align:center">3 Best Things to Do in New York City</h1>
-     <h2 style="text-align:center">You can sleep when you're home</h2>
-     <p style="text-align: center;">" Hi, my name is Ashna and I am the citizen of United States of America. I would like to share my experience about the most beautiful city in the world, New York. It is so big and so diverse a place that you could live here four lifetimes and not experience all the amazing things the city has to offer. 
-         Even figuring out where to start your NYC trip is a daunting task. But we want to help you cut down the impossibly long list of ways to spend your day. 
-     </p>
-     <ol>
-        <li><a href ="https://www.cntraveler.com/activities/new-york/central-park">Central Park</a></li>
-        <li><a href="https://www.cntraveler.com/activities/new-york/whitney-museum-of-american-art">Whitney Museum of American Art</a></li>
-        <li><a href="https://www.cntraveler.com/restaurants/new-york/smorgasburg-williamsburg">Smorgasburg Williamsburg</a></li>
-        </ol>
-     <img style="width:500px; height:500px; margin-left:120px; margin-top:30px;"src="new_york_city.jpg">
+    function checkPageBounds(direction, imgWidth, pos) {
+        //
+        // Complete this to reverse direction on hitting page bounds
+        if(pos+imgWidth >= pageWidth || pos < 0) {
+            direction =!direction;
+            
+            direction =  Number(direction);
+            console.log('direction is ', direction);
+        }
+        // 
+        return direction;
+    }
+</SCRIPT>
+<style>
+    body {
+        background-image: url("hero.jpg");
+    }
+</style>
 
+<body>
+    <img id="PacMan" src="PacMan1.png" width='200' onclick="Run()" style="position:absolute"> </img>
+    
+    
 </body>
+
 </html>
-
-
