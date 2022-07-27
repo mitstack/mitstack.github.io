@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Around | Multipurpose Bootstrap Template</title>
+    <!-- SEO Meta Tags-->
+    <meta
+      name="description"
+      content="Around - Multipurpose Bootstrap Template"
+    />
+    <meta
+      name="keywords"
+      content="bootstrap, business, consulting, coworking space, services, creative agency, dashboard, e-commerce, mobile app showcase, multipurpose, product landing, shop, software, ui kit, web studio, landing, html5, css3, javascript, gallery, slider, touch, creative"
+    />
+    <meta name="author" content="Createx Studio" />
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab.svg" />
+    <meta name="msapplication-TileColor" content="#766df4" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- Page loading styles-->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all 0.4s 0.2s ease-in-out;
+        transition: all 0.4s 0.2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-family: "Inter", sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #737491;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: 0.75rem;
+        vertical-align: text-bottom;
+        border: 0.15em solid #766df4;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner 0.75s linear infinite;
+        animation: spinner 0.75s linear infinite;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          var preloader = document.querySelector(".page-loading");
+          preloader.classList.remove("active");
+          setTimeout(function () {
+            preloader.remove();
+          }, 2000);
+        };
+      })();
+    </script>
+    <!-- Vendor Styles-->
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="vendor/simplebar/dist/simplebar.min.css"
+    />
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="css/theme.min.css" />
+  </head>
+  <!-- Body-->
+  <body>
+    <!-- Page loading spinner-->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div>
+        <span>Loading...</span>
+      </div>
+    </div>
+    <main class="page-wrapper">
+      <!-- Sign In Modal-->
+      <div class="modal fade" id="modal-signin" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content border-0">
+            <div class="view show" id="modal-signin-view">
+              <div class="modal-header border-0 bg-dark px-4">
+                <h4 class="modal-title text-light">Sign in</h4>
+                <button
+                  class="btn-close btn-close-white"
+                  type="button"
+                  data-bs-dismiss="modal"
+                  aria-label="btn-close "
+                ></button>
+              </div>
+              <div class="modal-body px-4">
+                <p class="fs-ms text-muted">
+                  Sign in to your account using email and password provided
+                  during registration.
+                </p>
+                <form class="needs-validation" novalidate>
+                  <div class="mb-3">
+                    <div class="input-group">
+                      <i
+                        class="ai-mail position-absolute top-50 start-0 translate-middle-y ms-3"
+                      ></i>
+                      <input
+                        class="form-control rounded"
+                        type="email"
+                        placeholder="Email"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="input-group">
+                      <i
+                        class="ai-lock position-absolute top-50 start-0 translate-middle-y ms-3"
+                      ></i>
+                      <div class="password-toggle w-100">
+                        <input
+                          class="form-control"
+                          type="password"
+                          placeholder="Password"
+                          required
+                        />
+                        <label
+                          class="password-toggle-btn"
+                          aria-label="Show/hide password"
+                        >
+                          <input
+                            class="password-toggle-check"
+                            type="checkbox"
+                          /><span class="password-toggle-indicator"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-3 mb-3"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="keep-signed"
+                      />
+                      <label class="form-check-label fs-sm" for="keep-signed"
+                        >Keep me signed in</label
+                      >
+                    </div>
+                    <a
+                      class="nav-link-style fs-ms"
+                      href="password-recovery.html"
+                      >Forgot password?</a
+                    >
+                  </div>
+                  <button class="btn btn-primary d-block w-100" type="submit">
+                    Sign in
+                  </button>
+                  <p class="fs-sm pt-3 mb-0">
+                    Don't have an account?
+                    <a href="#" class="fw-medium" data-view="#modal-signup-view"
+                      >Sign up</a
+                    >
+                  </p>
+                </form>
+              </div>
+            </div>
+            <div class="view" id="modal-signup-view">
+              <div class="modal-header border-0 bg-dark px-4">
+                <h4 class="modal-title text-light">Sign up</h4>
+                <button
+                  class="btn-close btn-close-white"
+                  type="button"
+                  data-bs-dismiss="modal"
+                  aria-label="btn-close"
+                ></button>
+              </div>
+              <div class="modal-body px-4">
+                <p class="fs-ms text-muted">
+                  Registration takes less than a minute but gives you full
+                  control over your orders.
+                </p>
+                <form class="needs-validation" novalidate>
+                  <div class="mb-3">
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="Full name"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="Email"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3 password-toggle">
+                    <input
+                      class="form-control"
+                      type="password"
+                      placeholder="Password"
+                      required
+                    />
+                    <label
+                      class="password-toggle-btn"
+                      aria-label="Show/hide password"
+                    >
+                      <input
+                        class="password-toggle-check"
+                        type="checkbox"
+                      /><span class="password-toggle-indicator"></span>
+                    </label>
+                  </div>
+                  <div class="mb-3 password-toggle">
+                    <input
+                      class="form-control"
+                      type="password"
+                      placeholder="Confirm password"
+                      required
+                    />
+                    <label
+                      class="password-toggle-btn"
+                      aria-label="Show/hide password"
+                    >
+                      <input
+                        class="password-toggle-check"
+                        type="checkbox"
+                      /><span class="password-toggle-indicator"></span>
+                    </label>
+                  </div>
+                  <button class="btn btn-primary d-block w-100" type="submit">
+                    Sign up
+                  </button>
+                  <p class="fs-sm pt-3 mb-0">
+                    Already have an account?
+                    <a href="#" class="fw-medium" data-view="#modal-signin-view"
+                      >Sign in</a
+                    >
+                  </p>
+                </form>
+              </div>
+            </div>
+            <div class="modal-body text-center px-4 pt-2 pb-4">
+              <hr class="my-0" />
+              <p class="fs-sm fw-medium text-heading pt-4">Or sign in with</p>
+              <a class="btn-social bs-facebook bs-lg mx-1 mb-2" href="#"
+                ><i class="ai-facebook"></i></a
+              ><a class="btn-social bs-twitter bs-lg mx-1 mb-2" href="#"
+                ><i class="ai-twitter"></i></a
+              ><a class="btn-social bs-instagram bs-lg mx-1 mb-2" href="#"
+                ><i class="ai-instagram"></i></a
+              ><a class="btn-social bs-google bs-lg mx-1 mb-2" href="#"
+                ><i class="ai-google"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Navbar Floating light for Index page only-->
+      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
+      <header
+        class="header navbar navbar-expand-lg navbar-dark navbar-floating navbar-sticky"
+        data-fixed-element
+      >
+        <div class="container px-0 px-xl-3">
+          <button
+            class="navbar-toggler ms-n2 me-2"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#primaryMenu"
+          >
+            <span class="navbar-toggler-icon"></span></button
+          ><img
+              class="navbar-floating-logo d-none d-lg-block"
+              src="img/demo/presentation/demos/ashna.png"
+              alt="Around"
+              width="153" /><img
+              class="navbar-stuck-logo"
+              src="img/demo/presentation/demos/ashna.png"
+              alt="Around"
+              width="153" /><img
+              class="d-lg-none"
+              src="img/demo/presentation/demos/ashna.png"
+              alt="Around"
+              width="58"
+          />
+
+          <div class="offcanvas offcanvas-collapse order-lg-2" id="primaryMenu">
+            <div class="offcanvas-header navbar-shadow">
+              <h5 class="mt-1 mb-0">Menu</h5>
+              <button
+                class="btn-close lead"
+                type="button"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <!-- Menu-->
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown dropdown-mega">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    >Projects</a
+                  >
+                  <div class="dropdown-menu">
+                    <div
+                      class="dropdown-column dropdown-column-img bg-secondary"
+                      href="index.html"
+                      style="background-image: url(img/demo/presentation/demos/ashna.png)"
+                    ></div>
+                    <div class="dropdown-column">
+                      <a class="dropdown-item" href="https://ashna-golanibankingapp.s3.amazonaws.com/starter/index.html#/"
+                        >Ash Bank Digital Banking</a
+                      ><a
+                        class="dropdown-item"
+                        href="https://github.com/mitstack/MITModule"
+                        >Real Time Bus Tracker</a
+                      ><a class="dropdown-item" href="https://mitstack.github.io/"
+                        >2 Dimension PacMan</a
+                      ><a
+                        class="dropdown-item"
+                        href="https://github.com/mitstack/MITModule"
+                        >Eye Ball Movement</a
+                      >
+                    </div>
+                    
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Page content-->
+      <!-- Intro-->
+      <section
+        class="d-flex align-items-center position-relative bg-dark bg-size-cover bg-position-center min-vh-100 overflow-hidden pt-6 pb-lg-5"
+        style="background-image: url(img/demo/presentation/intro/bg.jpg)"
+      >
+        <div class="container-fluid pt-4 pb-5 py-lg-5">
+          <div class="row align-items-center py-3">
+            <div class="col-xl-6 col-lg-5 d-flex justify-content-end">
+              <div
+                class="pt-2 mx-auto mb-5 mb-lg-0 ms-lg-0 me-xl-7 text-center text-lg-start"
+                style="max-width: 495px"
+              >
+                <h1 class="display-4 text-light pb-2">Ashna Golani</h1>
+                <p class="h4 fw-light text-light opacity-70 line-height-base">
+                  MIT Full Stack Developer (MERN) having 10+ years of
+                  professional experience as QA Automation Engineer (SDET). I am passionate about finding vulnerabilities in the code and keeping the code quality standards high.
+                </p>
+                <a href="https://www.linkedin.com/in/ashna-golani-0213514b">Linkedin Profile</a>
+                <br/>
+                <a
+                  class="d-inline-flex align-items-center text-decoration-none pt-2 mt-4 mb-5"
+                  href="#demos"
+                  data-scroll
+                  ><span
+                    class="btn btn-icon rounded-circle border-light flex-shrink-0 px-3"
+                    ><i class="ai-arrow-down h4 text-light my-1"></i></span
+                  ><span class="ms-3 text-light fw-medium"
+                    >Project Demos</span
+                  ></a
+                >
+                <br/>
+                
+                <hr class="hr-light mt-0 mb-5" />
+                <div class="row">
+                  <div class="col-sm-4 mb-4 mb-sm-0">
+                    <div class="h1 text-light mb-1">4</div>
+                    <div class="h5 text-light fw-normal opacity-70 mb-2">
+                      Featured Projects
+                    </div>
+                    <span class="badge rounded-pill bg-success"
+                      >More coming</span
+                    >
+                  </div>
+                  <div class="col-sm-4 mb-4 mb-sm-0">
+                    <div class="h1 text-light mb-1">10+</div>
+                    <div class="h5 text-light fw-normal opacity-70 mb-1">
+                      Flexible Components
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="h1 text-light mb-1">20+</div>
+                    <div class="h5 text-light fw-normal opacity-70 mb-1">
+                      Cutting Edge Technologies
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-7">
+              <div class="parallax ms-lg-n5" style="max-width: 920px">
+                <div class="parallax-layer position-relative" data-depth="0.1">
+                  <img
+                    src="img/demo/presentation/intro/layer01.png"
+                    alt="Layer"
+                  />
+                </div>
+                <div class="parallax-layer" style="z-index: 2" data-depth="0.3">
+                  <img
+                    src="img/demo/presentation/intro/layer02.png"
+                    alt="Layer"
+                  />
+                </div>
+                <div class="parallax-layer" data-depth="0.2">
+                  <img
+                    src="img/demo/presentation/intro/layer03.png"
+                    alt="Layer"
+                  />
+                </div>
+                <div class="parallax-layer" style="z-index: 3" data-depth="0.1">
+                  <img
+                    src="img/demo/presentation/intro/layer04.png"
+                    alt="Layer"
+                  />
+                </div>
+                <div class="parallax-layer" data-depth="0.15">
+                  <img
+                    src="img/demo/presentation/intro/layer05.png"
+                    alt="Layer"
+                  />
+                </div>
+                <div
+                  class="parallax-layer"
+                  style="z-index: 4"
+                  data-depth="0.25"
+                >
+                  <img
+                    src="img/demo/presentation/intro/layer06.png"
+                    alt="Layer"
+                  />
+                </div>
+                <div class="parallax-layer" data-depth="0.3">
+                  <img
+                    src="img/demo/presentation/intro/layer07.png"
+                    alt="Layer"
+                  />
+                </div>
+                <div class="parallax-layer" data-depth="0.4">
+                  <img
+                    src="img/demo/presentation/intro/layer08.png"
+                    alt="Layer"
+                  />
+                </div>
+                <div class="parallax-layer" data-depth="0.35">
+                  <img
+                    src="img/demo/presentation/intro/layer09.png"
+                    alt="Layer"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Demos-->
+      <section class="bg-secondary" id="demos">
+        <div class="container pt-5 pb-4 py-md-6 py-lg-7">
+          <div class="text-center mb-5 pt-3 pt-lg-4">
+            <h2 class="h1 mb-4">MIT - Featured Capstone Projects</h2>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-sm-6 mb-grid-gutter pb-3">
+              <a
+                class="d-block nav-heading text-center"
+                href="https://ashna-golanibankingapp.s3.amazonaws.com/starter/index.html#/"
+              >
+                <div class="card card-hover border-0 shadow-lg mb-4">
+                  <img
+                    class="card-img"
+                    src="img/demo/presentation/demos/banking.png"
+                    alt="Business Consulting"
+                  />
+                </div>
+                <h3 class="h5 nav-heading-title mb-0">
+                  AshBank Digital Banking
+                </h3>
+                <span class="fs-sm fw-normal text-muted"
+                  >Banking Application - Users can create an account and leverage the deposit checks, transfer money to friends and view transaction history </span
+                ></a
+              >
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-grid-gutter pb-3">
+              <a
+                class="d-block nav-heading text-center"
+                href="https://github.com/mitstack/MITModule"
+              >
+                <div class="card card-hover border-0 shadow-lg mb-4">
+                  <img
+                    class="card-img"
+                    src="img/demo/presentation/demos/bustracker.png"
+                    alt="Shop Homepage"
+                  />
+                </div>
+                <h3 class="h5 nav-heading-title mb-0">Real Time Bus Tracker</h3>
+                <span class="fs-sm fw-normal text-muted"
+                  >Using fetch API and updating the MBTA bus geocodes based on API response on google maps. Using Mapbox library and REST API</span
+                ></a
+              >
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-grid-gutter pb-3">
+              <a
+                class="d-block nav-heading text-center"
+                href="https://github.com/mitstack/MITModule"
+              >
+                <div class="card card-hover border-0 shadow-lg mb-4">
+                  <img
+                    class="card-img"
+                    src="img/demo/presentation/demos/pacman.png"
+                    alt="Booking &amp;amp; Directory"
+                  />
+                </div>
+                <h3 class="h5 nav-heading-title mb-0">2 Dimension PacMan</h3>
+                <span class="fs-sm fw-normal text-muted"
+                  >Gaming Theme- 2 Dimesional movement of the PacMan, detects the screen edge and reverses the direction.</span
+                ></a
+              >
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-grid-gutter pb-3">
+              <a
+                class="d-block nav-heading text-center"
+                href="https://github.com/mitstack/MITModule"
+              >
+                <div class="card card-hover border-0 shadow-lg mb-4">
+                  <img
+                    class="card-img"
+                    src="img/demo/presentation/demos/eyemovement.png"
+                    alt="Creative Agency"
+                  />
+                </div>
+                <h3 class="h5 nav-heading-title mb-0">Eye Ball Movement</h3>
+                <span class="fs-sm fw-normal text-muted"
+                  >Wallpaper 3D Theme - Eyeball movement based on the mouse events</span
+                ></a
+              >
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-grid-gutter pb-3">
+              <a
+                class="d-block nav-heading text-center"
+                href="https://github.com/mitstack/MITModule"
+              >
+                <div class="card card-hover border-0 shadow-lg mb-4">
+                  <img
+                    class="card-img"
+                    src="img\demo\presentation\demos\more-coming.png"
+                    alt="Creative Agency"
+                  />
+                </div>
+                <h3 class="h5 nav-heading-title mb-0">Backend Projects Coming Soon</h3>
+                <span class="fs-sm fw-normal text-muted"
+                  >Full Stack Apps - Banking application and Restaurant Apps..</span
+                ></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Components-->
+      
+      <!-- Inner Pages-->
+      
+      
+      <!-- Features-->
+      <section class="container py-5 py-md-6 py-lg-7">
+        <div class="text-center mb-5 pt-3 pt-lg-4">
+          
+            <span class="bg-faded-primary rounded text-primary px-3 py-2"
+              >Feature Highlights</span
+            >
+        
+        </div>
+        <div class="row pt-3 pt-lg-4">
+          <div class="col-md-6">
+            <div class="d-flex mb-4 pb-2">
+              <i class="ai-check-circle h4 text-success"></i>
+              <div class="ps-3">
+                <h3 class="h5">React Framework and Bootstrap UI</h3>
+                <p class="fs-md mb-0">
+                  React is most popular frontend framework out in the software world. I have used React, Bootstrap, JSX, mapbox, webpack, REST API, node and yarn in developing the projects
+                </p>
+              </div>
+            </div>
+            <div class="d-flex mb-4 pb-2">
+              <i class="ai-check-circle h4 text-success"></i>
+              <div class="ps-3">
+                <h3 class="h5">Easy to Customize with Sass</h3>
+                <p class="fs-md mb-0">
+                  Capstone projects are built using Sass. Easily change colors, typography
+                  and much more. It is the most mature, stable, and powerful CSS
+                  extension language in the world.
+                </p>
+              </div>
+            </div>
+            <div class="d-flex mb-4 pb-2">
+              <i class="ai-check-circle h4 text-success"></i>
+              <div class="ps-3">
+                <h3 class="h5">JSX - JS Syntax Extension</h3>
+                <p class="fs-md mb-0">
+                  No need to write huge amount of react specific code, if you don’t want to.
+                  JSX provides features to mimic the code in HTML format and you need babel transcompiler to make it work end to end.
+                </p>
+              </div>
+            </div>
+            <div class="d-flex mb-4 pb-2">
+              <i class="ai-check-circle h4 text-success"></i>
+              <div class="ps-3">
+                <h3 class="h5">Built With Latest Bootstrap</h3>
+                <p class="fs-md mb-0">
+                  Capstone featured products based on
+                  Bootstrap 5 - the world's most popular responsive,
+                  mobile-first front-end component library.
+                </p>
+              </div>
+            </div>
+            <div class="d-flex mb-4 pb-2">
+              <i class="ai-check-circle h4 text-success"></i>
+              <div class="ps-3">
+                <h3 class="h5">50+ Flexible Components</h3>
+                <p class="fs-md mb-0">
+                  Besides styling all default Bootstrap 5 components, 
+                  I have used lots of new flexible, customizable and reusable
+                  elements you can use across the website.
+                </p>
+              </div>
+            </div>
+            <div class="d-flex mb-4 pb-2">
+              <i class="ai-check-circle h4 text-success"></i>
+              <div class="ps-3">
+                <h3 class="h5">Mobile Friendly Interface</h3>
+                <p class="fs-md mb-0">
+                  It's not a surprise that nowadays over 70% of users surf the
+                  inernet and shop online using their mobile devices. Around is
+                  100% responsive and optimized for small touch screens.
+                </p>
+              </div>
+            </div>
+            <div class="d-flex mb-4 pb-2">
+              <i class="ai-check-circle h4 text-success"></i>
+              <div class="ps-3">
+                <h3 class="h5">REST API</h3>
+                <p class="fs-md mb-0">
+                  Capstone proejcts are built with REST API specifications. Robust and will not break any contract testing.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="d-flex mb-4 pb-2">
+              <i class="ai-check-circle h4 text-success"></i>
+              <div class="ps-3">
+                <h3 class="h5">Testing</h3>
+                <p class="fs-md mb-0">
+                  I make sure that my projects covers all aspects of the application. Pretty extensive unit test coverage is added in each project.
+                </p>
+              </div>
+            </div>
+            <div class="d-flex mb-4 pb-2">
+              <i class="ai-check-circle h4 text-success"></i>
+              <div class="ps-3">
+                <h3 class="h5">Cutting Edge Technolgies</h3>
+                <p class="fs-md mb-0">
+                  Projects are equiped with cutting edge tools and technologies to make sure we are upto date the software evolution.
+                  Express, node, react, rest api, webpack, yarn and many more tools..
+                </p>
+              </div>
+            </div>
+            <div class="d-flex mb-4 pb-2">
+              <i class="ai-check-circle h4 text-success"></i>
+              <div class="ps-3">
+                <h3 class="h5">W3C Valid HTML Code</h3>
+                <p class="fs-md mb-0">
+                  All HTML files are checked via W3C validator to ensure 100%
+                  valid code. As you probably know invalid HTML limits
+                  innovation, but Around is innovative at its core.
+                </p>
+              </div>
+            </div>
+            <div class="d-flex mb-4 pb-2">
+              <i class="ai-check-circle h4 text-success"></i>
+              <div class="ps-3">
+                <h3 class="h5">Future-proof JavaScript</h3>
+                <p class="fs-md mb-0">
+                  Around core scripts as well as all dependencies are written in
+                  vanilla JS. The only component that requires jQuery is
+                  Bootstrap itself. But that will change soon. And whent this
+                  happens we will drop jQuery altogether.
+                </p>
+              </div>
+            </div>
+            <div class="d-flex mb-4 pb-2">
+              <i class="ai-check-circle h4 text-success"></i>
+              <div class="ps-3">
+                <h3 class="h5">Detailed Documentation</h3>
+                <p class="fs-md mb-0">
+                  Detailed Readme includes links to online documentation. It
+                  covers all crucial information about how to get started,
+                  customize template and components usage.
+                </p>
+              </div>
+            </div>
+            <h3 class="h5">...and much more</h3>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer bg-dark pt-5 pt-md-6 pt-lg-7">
+      <div class="container pt-3 pt-md-0">
+        <div class="pb-md-4 text-center">
+          <h3 class="text-light fw-light mb-3">Want to stay tuned?</h3>
+          <h5 class="text-light mb-5">
+            Please leave your email address below to get the notification if I add new projects.
+          </h5>
+          
+        </div>
+        <hr class="hr-light my-5" />
+        <div class="row justify-content-center">
+          <div class="col-lg-6 col-md-7 pb-md-4 text-center">
+            
+            <form
+              class="subscription-form validate"
+              action="https://studio.us12.list-manage.com/subscribe/post?u=c7103e2c981361a6639545bd5&amp;amp;id=29ca296126"
+              method="post"
+              name="mc-embedded-subscribe-form"
+              target="_blank"
+              novalidate
+            >
+              <div class="input-group flex-nowrap">
+                <i
+                  class="ai-mail position-absolute top-50 start-0 translate-middle-y text-muted ms-3"
+                ></i>
+                <input
+                  class="form-control rounded-start"
+                  type="email"
+                  name="EMAIL"
+                  placeholder="Your email"
+                />
+                <button class="btn btn-primary" type="submit" name="subscribe">
+                  Subscribe*
+                </button>
+              </div>
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px" aria-hidden="true">
+                <input
+                  class="subscription-form-antispam"
+                  type="text"
+                  name="b_c7103e2c981361a6639545bd5_29ca296126"
+                  tabindex="-1"
+                />
+              </div>
+             
+              <div class="subscription-status"></div>
+            </form>
+          </div>
+        </div>
+        <hr class="hr-light my-5" />
+        <p class="fs-sm text-center mb-0 pb-5">
+          <span class="text-light opacity-50 me-1"
+            >© All rights reserved. Made by</span
+          ><a
+            class="nav-link-style nav-link-light"
+            href="https://github.com/mitstack"
+            target="_blank"
+            rel="noopener"
+            >Ashna Golani - MIT Student</a
+          >
+        </p>
+      </div>
+    </footer>
+    <!-- Back to top button--><a
+      class="btn-scroll-top"
+      href="#top"
+      data-scroll
+      data-fixed-element
+      ><span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span
+      ><i class="btn-scroll-top-icon ai-arrow-up"> </i
+    ></a>
+    <!-- Vendor scrits: js libraries and plugins-->
+    <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="vendor/parallax-js/dist/parallax.min.js"></script>
+    <!-- Main theme script-->
+    <script src="js/theme.min.js"></script>
+  </body>
+</html>
