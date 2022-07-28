@@ -1,0 +1,155 @@
+{
+    "acceptsordersbeforeopening": false,
+    "acceptsordersuntilclosing": true,
+    "advanceonly": false,
+    "advanceorderdays": 100,
+    "allowhandoffchoiceatmanualfire": false,
+    "attributes": [],
+    "availabilitymessage": null,
+    "brand": "octestchannel",
+    "calendars": null,
+    "candeliver": true,
+    "canpickup": true,
+    "city": "New York",
+    "contextualpricing": null,
+    "country": "US",
+    "crossstreet": "Duck Street",
+    "customerfacingmessage": "",
+    "customfields": [
+      {
+        "id": Int64_1,
+        "label": "OC Custom Field",
+        "qualificationcriteria": "AllOrders",
+        "required": false,
+        "validationregex": ""
+      },
+      {
+        "id": Int64_2,
+        "label": "OC Custom Field",
+        "qualificationcriteria": "AllOrders",
+        "required": false,
+        "validationregex": ""
+      }
+    ],
+    "deliveryarea": "Around the neighborhood",
+    "deliverydelayalert": {
+      "enabled": false,
+      "message": null
+    },
+    "deliverydelayalertenabled": false,
+    "deliverydelayalertmessage": null,
+    "deliveryfee": 0,
+    "deliveryfeetiers": [],
+    "distance": 0,
+    "extref": "ocExtRef",
+    "hasolopass": false,
+    "id": Int64_3,
+    "isavailable": true,
+    "iscurrentlyopen": true,
+    "labels": [
+      {
+        "key": "handoffmode_delivery",
+        "value": "Delivery"
+      },
+      {
+        "key": "handoffmode_dispatch",
+        "value": "Delivery"
+      },
+      {
+        "key": "handoffmode_pickup",
+        "value": "Pickup"
+      },
+      {
+        "key": "handoffmode_curbside",
+        "value": "Curbside"
+      },
+      {
+        "key": "handoffmode_drivethru",
+        "value": "Drive-thru"
+      },
+      {
+        "key": "handoffmode_dinein",
+        "value": "Dine In"
+      },
+      {
+        "key": "manual_fire_label",
+        "value": "Check-in"
+      },
+      {
+        "key": "thanks_curbsidepickup_instructions",
+        "value": "thanks_curbsidepickup_instructions_scrubbed"
+      },
+      {
+        "key": "thanks_counterpickup_instructions",
+        "value": "thanks_counterpickup_instructions_scrubbed"
+      },
+      {
+        "key": "thanks_delivery_instructions",
+        "value": "thanks_delivery_instructions_scrubbed"
+      },
+      {
+        "key": "thanks_dispatch_instructions",
+        "value": "thanks_dispatch_instructions_scrubbed"
+      },
+      {
+        "key": "thanks_drivethru_instructions",
+        "value": "thanks_drivethru_instructions_scrubbed"
+      },
+      {
+        "key": "thanks_dinein_instructions",
+        "value": "thanks_dinein_instructions_scrubbed"
+      },
+      {
+        "key": "thanks_pickupinstructions",
+        "value": "thanks_pickupinstructions_scrubbed"
+      }
+    ],
+    "latitude": 40.7052022,
+    "longitude": -74.0131655,
+    "maximumpayinstoreorder": 0.0,
+    "metadata": null,
+    "minimumdeliveryorder": 0.0,
+    "minimumpickuporder": 0.0,
+    "mobileurl": null,
+    "name": "OC Test Vendor",
+    "productrecipientnamelabel": "Name:",
+    "requiresphonenumber": true,
+    "showcalories": false,
+    "slug": "oc-test-vendor-vendor",
+    "specialinstructionsmaxlength": 255,
+    "state": "NY",
+    "storename": "OC Test Co",
+    "streetaddress": "24 Broadway",
+    "suggestedtippercentage": 0,
+    "supportedarrivalmessagehandoffmodes": [],
+    "supportedcardtypes": "American Express/Discover/MasterCard/Visa",
+    "supportedcountries": [
+      "US"
+    ],
+    "supportedtimemodes": [
+      "manualfire",
+      "advance",
+      "asap"
+    ],
+    "supportsbaskettransfers": true,
+    "supportscoupons": false,
+    "supportscurbside": false,
+    "supportsdinein": true,
+    "supportsdispatch": false,
+    "supportsdrivethru": true,
+    "supportsfeedback": true,
+    "supportsgrouporders": true,
+    "supportsguestordering": true,
+    "supportsloyalty": false,
+    "supportsmanualfire": true,
+    "supportsnationalmenu": false,
+    "supportsonlineordering": true,
+    "supportsproductrecipientnames": false,
+    "supportsspecialinstructions": true,
+    "supportssplitpayments": true,
+    "supportstip": true,
+    "telephone": "(808) 555-3333",
+    "url": null,
+    "utcoffset": -5,
+    "zip": "10004"
+  }
