@@ -25,6 +25,22 @@
     <meta name="theme-color" content="#ffffff" />
     <!-- Page loading styles-->
     <style>
+      .cursor {
+    height: 5rem;
+    width: 5rem;
+  }
+  .cursor {
+  z-index: 101;
+  width: 7rem;
+  height: 7rem;
+  border: none;
+  background: radial-gradient(circle closest-side, rgb(243, 243, 243), transparent);
+  opacity: 0.3;
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
       .page-loading {
         position: fixed;
         top: 0;
@@ -114,6 +130,8 @@
   </head>
   <!-- Body-->
   <body>
+    <div class="cursor"></div>
+
     <!-- Page loading spinner-->
     <div class="page-loading active">
       <div class="page-loading-inner">
@@ -842,5 +860,14 @@
     <script src="vendor/parallax-js/dist/parallax.min.js"></script>
     <!-- Main theme script-->
     <script src="js/theme.min.js"></script>
+    <script>
+      let cursor = document.querySelector(".cursor");
+      const cursorAnimation = (e) => {
+  cursor.style.top = e.pageY + "px";
+  cursor.style.left = e.pageX + "px";
+};
+
+window.addEventListener("mousemove", cursorAnimation);
+    </script>
   </body>
 </html>
