@@ -23,7 +23,7 @@
     <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab.svg" />
     <meta name="msapplication-TileColor" content="#766df4" />
     <meta name="theme-color" content="#ffffff" />
-    <link rel="stylesheet" href="./style.css">
+    
     <!-- Page loading styles-->
     <style>
       .cursor {
@@ -427,7 +427,7 @@
                
 
                 
-                 <button type="button" class="btn btn-link" onclick="confetti.start()">View MIT Certificate</button>
+                 <button type="button" class="btn btn-link" onclick="viewMITCertificate()">View MIT Certificate</button>
                 
                 <br/>
                 <a
@@ -883,11 +883,12 @@ window.addEventListener("mousemove", cursorAnimation);
      <script>
 
       // start
+    function viewMITCertificate() {
 
       const start = () => {
           setTimeout(function() {
               confetti.start()
-          }, 1000); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
+          }, 10); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
       };
 
       //  Stop
@@ -898,8 +899,11 @@ window.addEventListener("mousemove", cursorAnimation);
           }, 5000); // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
       };
 
-      
+      start();
       stop();
+
+    }
+      
   </script>
   </body>
 </html>
