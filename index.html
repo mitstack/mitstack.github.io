@@ -4,10 +4,7 @@
     <meta charset="utf-8" />
     <title>Ashna Golani - MIT Fullstack Developer</title>
     <!-- SEO Meta Tags-->
-    <meta
-      name="description"
-      content="Ashna Golani - MIT Fullstack Developer"
-    />
+    <meta name="description" content="Ashna Golani - MIT Fullstack Developer" />
     <meta
       name="keywords"
       content="bootstrap, business, consulting, coworking space, services, creative agency, dashboard, e-commerce, mobile app showcase, multipurpose, product landing, shop, software, ui kit, web studio, landing, html5, css3, javascript, gallery, slider, touch, creative"
@@ -23,26 +20,29 @@
     <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab.svg" />
     <meta name="msapplication-TileColor" content="#766df4" />
     <meta name="theme-color" content="#ffffff" />
-    
+
     <!-- Page loading styles-->
     <style>
       .cursor {
-    height: 5rem;
-    width: 5rem;
-  }
-  .cursor {
-  z-index: 101;
-  width: 7rem;
-  height: 7rem;
-  border: none;
-  background: radial-gradient(circle closest-side, rgb(243, 243, 243), transparent);
-  opacity: 0.3;
-  position: absolute;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  
-}
+        height: 5rem;
+        width: 5rem;
+      }
+      .cursor {
+        z-index: 101;
+        width: 7rem;
+        height: 7rem;
+        border: none;
+        background: radial-gradient(
+          circle closest-side,
+          rgb(243, 243, 243),
+          transparent
+        );
+        opacity: 0.3;
+        position: absolute;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+      }
       .page-loading {
         position: fixed;
         top: 0;
@@ -96,6 +96,36 @@
         -webkit-animation: spinner 0.75s linear infinite;
         animation: spinner 0.75s linear infinite;
       }
+      .bio-content {
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+       
+        white-space: nowrap; /* Keeps the content on a single line */
+       
+        
+        animation: typing 3.5s steps(40, end),
+          blink-caret 0.75s step-end infinite;
+      }
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+
+      /* The typewriter cursor effect */
+      @keyframes blink-caret {
+        from,
+        to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: orange;
+        }
+      }
+
       @-webkit-keyframes spinner {
         100% {
           -webkit-transform: rotate(360deg);
@@ -339,18 +369,20 @@
           >
             <span class="navbar-toggler-icon"></span></button
           ><img
-              class="navbar-floating-logo d-none d-lg-block"
-              src="img/demo/presentation/demos/ashna.png"
-              alt="Around"
-              width="153" /><img
-              class="navbar-stuck-logo"
-              src="img/demo/presentation/demos/ashna.png"
-              alt="Around"
-              width="153" /><img
-              class="d-lg-none"
-              src="img/demo/presentation/demos/ashna.png"
-              alt="Around"
-              width="58"
+            class="navbar-floating-logo d-none d-lg-block"
+            src="img/demo/presentation/demos/ashna.png"
+            alt="Around"
+            width="153"
+          /><img
+            class="navbar-stuck-logo"
+            src="img/demo/presentation/demos/ashna.png"
+            alt="Around"
+            width="153"
+          /><img
+            class="d-lg-none"
+            src="img/demo/presentation/demos/ashna.png"
+            alt="Around"
+            width="58"
           />
 
           <div class="offcanvas offcanvas-collapse order-lg-2" id="primaryMenu">
@@ -377,18 +409,24 @@
                     <div
                       class="dropdown-column dropdown-column-img bg-secondary"
                       href="index.html"
-                      style="background-image: url(img/demo/presentation/demos/ashna.png)"
+                      style="
+                        background-image: url(img/demo/presentation/demos/ashna.png);
+                      "
                     ></div>
                     <div class="dropdown-column">
-                      <a class="dropdown-item" href="https://ashna-golanibankingapp.s3.amazonaws.com/starter/index.html#/"
-                      target="_blank"
+                      <a
+                        class="dropdown-item"
+                        href="https://ashna-golanibankingapp.s3.amazonaws.com/starter/index.html#/"
+                        target="_blank"
                         >Ash Bank Digital Banking</a
                       ><a
                         class="dropdown-item"
                         href="https://github.com/mitstack/MITModule"
                         target="_blank"
                         >Real Time Bus Tracker</a
-                      ><a class="dropdown-item" href="https://mitstack.github.io/"
+                      ><a
+                        class="dropdown-item"
+                        href="https://mitstack.github.io/"
                         >2 Dimension PacMan</a
                       ><a
                         class="dropdown-item"
@@ -397,7 +435,6 @@
                         >Eye Ball Movement</a
                       >
                     </div>
-                    
                   </div>
                 </li>
               </ul>
@@ -418,18 +455,28 @@
                 class="pt-2 mx-auto mb-5 mb-lg-0 ms-lg-0 me-xl-7 text-center text-lg-start"
                 style="max-width: 495px"
               >
-                <h1 class="display-4 text-light pb-2">Ashna Golani</h1>
+                <h1 class="display-4 text-light pb-2 bio-content">
+                  Ashna Golani
+                </h1>
                 <p class="h4 fw-light text-light opacity-70 line-height-base">
                   MIT Full Stack Developer (MERN) having 10+ years of
-                  professional experience as QA Automation Engineer (SDET). I am passionate about finding vulnerabilities in the code and keeping the code quality standards high.
+                  professional experience as QA Automation Engineer (SDET). I am
+                  passionate about finding vulnerabilities in the code and
+                  keeping the code quality standards high.
                 </p>
-                <a href="https://www.linkedin.com/in/ashna-golani-0213514b">Linkedin Profile </a>
-               
+                <a href="https://www.linkedin.com/in/ashna-golani-0213514b"
+                  >Linkedin Profile
+                </a>
 
-                
-                 <button type="button" class="btn btn-link" onclick="viewMITCertificate()">View MIT Certificate</button>
-                
-                <br/>
+                <button
+                  type="button"
+                  class="btn btn-link"
+                  onclick="viewMITCertificate()"
+                >
+                  View MIT Certificate
+                </button>
+
+                <br />
                 <a
                   class="d-inline-flex align-items-center text-decoration-none pt-2 mt-4 mb-5"
                   href="#demos"
@@ -441,8 +488,8 @@
                     >Project Demos</span
                   ></a
                 >
-                <br/>
-                
+                <br />
+
                 <hr class="hr-light mt-0 mb-5" />
                 <div class="row">
                   <div class="col-sm-4 mb-4 mb-sm-0">
@@ -547,7 +594,7 @@
                 href="https://ashna-golanibankingapp.s3.amazonaws.com/starter/index.html#/"
                 target="_blank"
               >
-                <div class="card card-hover border-0 shadow-lg mb-4 ">
+                <div class="card card-hover border-0 shadow-lg mb-4">
                   <img
                     class="card-img"
                     src="img/demo/presentation/demos/banking.png"
@@ -558,8 +605,10 @@
                   AshBank Digital Banking
                 </h3>
                 <span class="fs-sm fw-normal text-muted"
-                  >Banking Application - Users can create an account and leverage the deposit checks, transfer money to friends and view transaction history </span
-                ></a
+                  >Banking Application - Users can create an account and
+                  leverage the deposit checks, transfer money to friends and
+                  view transaction history
+                </span></a
               >
             </div>
             <div class="col-lg-4 col-sm-6 mb-grid-gutter pb-3">
@@ -577,7 +626,9 @@
                 </div>
                 <h3 class="h5 nav-heading-title mb-0">Real Time Bus Tracker</h3>
                 <span class="fs-sm fw-normal text-muted"
-                  >Using fetch API and updating the MBTA bus geocodes based on API response on google maps. Using Mapbox library and REST API</span
+                  >Using fetch API and updating the MBTA bus geocodes based on
+                  API response on google maps. Using Mapbox library and REST
+                  API</span
                 ></a
               >
             </div>
@@ -596,7 +647,8 @@
                 </div>
                 <h3 class="h5 nav-heading-title mb-0">2 Dimension PacMan</h3>
                 <span class="fs-sm fw-normal text-muted"
-                  >Gaming Theme- 2 Dimesional movement of the PacMan, detects the screen edge and reverses the direction.</span
+                  >Gaming Theme- 2 Dimesional movement of the PacMan, detects
+                  the screen edge and reverses the direction.</span
                 ></a
               >
             </div>
@@ -615,7 +667,8 @@
                 </div>
                 <h3 class="h5 nav-heading-title mb-0">Eye Ball Movement</h3>
                 <span class="fs-sm fw-normal text-muted"
-                  >Wallpaper 3D Theme - Eyeball movement based on the mouse events</span
+                  >Wallpaper 3D Theme - Eyeball movement based on the mouse
+                  events</span
                 ></a
               >
             </div>
@@ -632,9 +685,12 @@
                     alt="Creative Agency"
                   />
                 </div>
-                <h3 class="h5 nav-heading-title mb-0">Backend Projects Coming Soon</h3>
+                <h3 class="h5 nav-heading-title mb-0">
+                  Backend Projects Coming Soon
+                </h3>
                 <span class="fs-sm fw-normal text-muted"
-                  >Full Stack Apps - Banking application and Restaurant Apps..</span
+                  >Full Stack Apps - Banking application and Restaurant
+                  Apps..</span
                 ></a
               >
             </div>
@@ -642,18 +698,15 @@
         </div>
       </section>
       <!-- Components-->
-      
+
       <!-- Inner Pages-->
-      
-      
+
       <!-- Features-->
       <section class="container py-5 py-md-6 py-lg-7">
         <div class="text-center mb-5 pt-3 pt-lg-4">
-          
-            <span class="bg-faded-primary rounded text-primary px-3 py-2"
-              >Feature Highlights</span
-            >
-        
+          <span class="bg-faded-primary rounded text-primary px-3 py-2"
+            >Feature Highlights</span
+          >
         </div>
         <div class="row pt-3 pt-lg-4">
           <div class="col-md-6">
@@ -662,7 +715,9 @@
               <div class="ps-3">
                 <h3 class="h5">React Framework and Bootstrap UI</h3>
                 <p class="fs-md mb-0">
-                  React is most popular frontend framework out in the software world. I have used React, Bootstrap, JSX, mapbox, webpack, REST API, node and yarn in developing the projects
+                  React is most popular frontend framework out in the software
+                  world. I have used React, Bootstrap, JSX, mapbox, webpack,
+                  REST API, node and yarn in developing the projects
                 </p>
               </div>
             </div>
@@ -671,9 +726,9 @@
               <div class="ps-3">
                 <h3 class="h5">Easy to Customize with Sass</h3>
                 <p class="fs-md mb-0">
-                  Capstone projects are built using Sass. Easily change colors, typography
-                  and much more. It is the most mature, stable, and powerful CSS
-                  extension language in the world.
+                  Capstone projects are built using Sass. Easily change colors,
+                  typography and much more. It is the most mature, stable, and
+                  powerful CSS extension language in the world.
                 </p>
               </div>
             </div>
@@ -682,8 +737,10 @@
               <div class="ps-3">
                 <h3 class="h5">JSX - JS Syntax Extension</h3>
                 <p class="fs-md mb-0">
-                  No need to write huge amount of react specific code, if you don’t want to.
-                  JSX provides features to mimic the code in HTML format and you need babel transcompiler to make it work end to end.
+                  No need to write huge amount of react specific code, if you
+                  don’t want to. JSX provides features to mimic the code in HTML
+                  format and you need babel transcompiler to make it work end to
+                  end.
                 </p>
               </div>
             </div>
@@ -692,9 +749,9 @@
               <div class="ps-3">
                 <h3 class="h5">Built With Latest Bootstrap</h3>
                 <p class="fs-md mb-0">
-                  Capstone featured products based on
-                  Bootstrap 5 - the world's most popular responsive,
-                  mobile-first front-end component library.
+                  Capstone featured products based on Bootstrap 5 - the world's
+                  most popular responsive, mobile-first front-end component
+                  library.
                 </p>
               </div>
             </div>
@@ -703,9 +760,9 @@
               <div class="ps-3">
                 <h3 class="h5">50+ Flexible Components</h3>
                 <p class="fs-md mb-0">
-                  Besides styling all default Bootstrap 5 components, 
-                  I have used lots of new flexible, customizable and reusable
-                  elements you can use across the website.
+                  Besides styling all default Bootstrap 5 components, I have
+                  used lots of new flexible, customizable and reusable elements
+                  you can use across the website.
                 </p>
               </div>
             </div>
@@ -725,7 +782,8 @@
               <div class="ps-3">
                 <h3 class="h5">REST API</h3>
                 <p class="fs-md mb-0">
-                  Capstone proejcts are built with REST API specifications. Robust and will not break any contract testing.
+                  Capstone proejcts are built with REST API specifications.
+                  Robust and will not break any contract testing.
                 </p>
               </div>
             </div>
@@ -736,7 +794,9 @@
               <div class="ps-3">
                 <h3 class="h5">Testing</h3>
                 <p class="fs-md mb-0">
-                  I make sure that my projects covers all aspects of the application. Pretty extensive unit test coverage is added in each project.
+                  I make sure that my projects covers all aspects of the
+                  application. Pretty extensive unit test coverage is added in
+                  each project.
                 </p>
               </div>
             </div>
@@ -745,8 +805,9 @@
               <div class="ps-3">
                 <h3 class="h5">Cutting Edge Technolgies</h3>
                 <p class="fs-md mb-0">
-                  Projects are equiped with cutting edge tools and technologies to make sure we are upto date the software evolution.
-                  Express, node, react, rest api, webpack, yarn and many more tools..
+                  Projects are equiped with cutting edge tools and technologies
+                  to make sure we are upto date the software evolution. Express,
+                  node, react, rest api, webpack, yarn and many more tools..
                 </p>
               </div>
             </div>
@@ -794,14 +855,13 @@
         <div class="pb-md-4 text-center">
           <h3 class="text-light fw-light mb-3">Want to stay tuned?</h3>
           <h5 class="text-light mb-5">
-            Please leave your email address below to get the notification if I add new projects.
+            Please leave your email address below to get the notification if I
+            add new projects.
           </h5>
-          
         </div>
         <hr class="hr-light my-5" />
         <div class="row justify-content-center">
           <div class="col-lg-6 col-md-7 pb-md-4 text-center">
-            
             <form
               class="subscription-form validate"
               action="https://studio.us12.list-manage.com/subscribe/post?u=c7103e2c981361a6639545bd5&amp;amp;id=29ca296126"
@@ -833,7 +893,7 @@
                   tabindex="-1"
                 />
               </div>
-             
+
               <div class="subscription-status"></div>
             </form>
           </div>
@@ -870,40 +930,36 @@
     <script>
       let cursor = document.querySelector(".cursor");
       const cursorAnimation = (e) => {
-  cursor.style.top = e.pageY + "px";
-  cursor.style.left = e.pageX + "px";
-};
+        cursor.style.top = e.pageY + "px";
+        cursor.style.left = e.pageX + "px";
+      };
 
-window.addEventListener("mousemove", cursorAnimation);
+      window.addEventListener("mousemove", cursorAnimation);
     </script>
-     <script src="./confetti.js"></script>
-     
-     //confetti code
-     
-     <script>
+    <script src="./confetti.js"></script>
 
-     // start confetti when user clicks on link View MIT Certificate
-    function viewMITCertificate() {
+    //confetti code
 
-      const start = () => {
-          setTimeout(function() {
-              confetti.start()
+    <script>
+      // start confetti when user clicks on link View MIT Certificate
+      function viewMITCertificate() {
+        const start = () => {
+          setTimeout(function () {
+            confetti.start();
           }, 10); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
-      };
+        };
 
-      //  Stop
+        //  Stop
 
-      const stop = () => {
-          setTimeout(function() {
-              confetti.stop()
+        const stop = () => {
+          setTimeout(function () {
+            confetti.stop();
           }, 5000); // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
-      };
+        };
 
-      start();
-      stop();
-
-    }
-      
-  </script>
+        start();
+        stop();
+      }
+    </script>
   </body>
 </html>
