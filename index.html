@@ -23,6 +23,7 @@
     <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab.svg" />
     <meta name="msapplication-TileColor" content="#766df4" />
     <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="./style.css">
     <!-- Page loading styles-->
     <style>
       .cursor {
@@ -423,6 +424,11 @@
                   professional experience as QA Automation Engineer (SDET). I am passionate about finding vulnerabilities in the code and keeping the code quality standards high.
                 </p>
                 <a href="https://www.linkedin.com/in/ashna-golani-0213514b">Linkedin Profile </a>
+               
+
+                
+                 <button type="button" class="btn btn-link" onclick="confetti.start()">View MIT Certificate</button>
+                
                 <br/>
                 <a
                   class="d-inline-flex align-items-center text-decoration-none pt-2 mt-4 mb-5"
@@ -870,5 +876,30 @@
 
 window.addEventListener("mousemove", cursorAnimation);
     </script>
+     <script src="./confetti.js"></script>
+     
+     //confetti code
+     
+     <script>
+
+      // start
+
+      const start = () => {
+          setTimeout(function() {
+              confetti.start()
+          }, 1000); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
+      };
+
+      //  Stop
+
+      const stop = () => {
+          setTimeout(function() {
+              confetti.stop()
+          }, 5000); // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
+      };
+
+      
+      stop();
+  </script>
   </body>
 </html>
